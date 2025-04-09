@@ -54,16 +54,77 @@
             </a>
             <p>Instagram</p>
         </div>
-        <!-- <div class="divider"></div> -->    <!-- Use this as a divider... only if needed -->
-         <section id="skills-section">
-            <h2>Hard Skills</h2>     <!--Change to h3 or h4?-->
-            
-
-
-
-         </section>
-
     </section>
+    <!-- <div class="divider"></div> -->    <!-- Use this as a divider... only if needed -->
+    <section id="skills-section"></section>
+         <!-- may need to put Hard Skills && Soft Skills and Certifications in own <div class>
+            so can format in CSS to appear to be 2 columns -->
+        <div class="smiski">      <!--ADD IN THE PICTURE WHEN YOU GET IT-->
+            <picture>
+                <!-- <source srcset="images/webp/smiski-laptop.webp" type="image/webp"> -->
+                <img src="images/smiski-laptop.png" alt="smiski">
+            </picture>
+        </div>
+        
+        <h2>Hard Skills</h2>     <!--Change to h3 or h4?-->
+        <h3>Languages</h3>
+        <p>
+            Java<br>
+            Python<br>
+            HTML/CSS<br>
+            C#
+        </p>
+        <h3>Design</h3>
+        <p>
+            Canva<br>
+            Adobe Lightroom<br>
+            Adobe Illustrator
+        </p>
+        <h2>Soft Skills</h2>     <!--Change to h3 or h4?-->
+        <p>
+            Project management  <br>
+            Problem-solving<br>
+            Detail-oriented
+        </p>
+        <h2>Certifications</h2>     <!--Change to h3 or h4?-->
+        <p>Cisco Networking Academy: Introduction to Cybersecurity
+            <br>(In Progress) 
+        </p>
+    </section>
+    <!-- <div class="divider"></div> -->    <!-- Use this as a divider... only if needed -->
+    <section id="projects-section">
+        <h2>Projects</h2>     <!--Change to h3 or h4?-->
+        <div class="projects-subsection">
+            <!-- import Swiper.js above to use here; use when have more projects -->
+            <a href="https://github.com/meganingram/swe3313-course-project" target="_blank" class="project-card">
+                <h4>Hank's Mineral Emporium</h4>    <!-- change to h3? -->
+                <picture>
+                    <source srcset="images/webp/floppy-fish.webp" type="image/webp"> <!--CHANGE-->
+                    <img src="images/floppy-fish.png" alt="Hank's Mineral Emporium"> <!--CHANGE-->
+                </picture>
+                <h5><em>C#, Blazor, ASP.NET Core</em></h5>  <!-- <em> italicizes; remove? -->
+                <p>A web-based shopping cart/sales system to sell Hank's minerals from Breaking Bad</p>
+            </a>
+            <!-- separate each of these links with a div?? -->
+            <a href="https://github.com/ADAMapDev/adaMapDevSite" target="_blank" class="project-card">
+                <h4>Accessible Interactive Map</h4>    <!-- change to h3? -->
+                <picture>
+                    <source srcset="images/webp/floppy-fish.webp" type="image/webp"> <!--CHANGE-->
+                    <img src="images/floppy-fish.png" alt="Accessible Interactive Map"> <!--CHANGE-->
+                </picture>
+                <h5><em>React, Flask, Google Maps API</em></h5>  <!-- <em> italicizes; remove? -->
+                <p>An accessible map for KSU students with lowest elevation paths and accessible door features</p>
+            </a>
+        </div>
+        <h3>Accomplishments</h3>     <!--Change to h2 or h4?-->
+        <ul>
+            <li>President’s List at Kennesaw State University (2022-2024)</li>
+            <li>Member of the IEEE–Eta Kappa Nu honor society (2023)</li>
+            <li>Social Media board-member for the Catholic Center at Kennesaw State University</li>
+          </ul>
+    </section>
+
+    <img src="heart-envelope-2.png" id="email-button" alt="heart envelope">
 
 </body>
 </html>
