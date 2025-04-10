@@ -1,0 +1,131 @@
+:root { /* allows for global CSS variables */
+    --text-color: #000000;
+    /*--link-color: #ffffff; */
+    --background-color: #eeeff1;
+}
+
+/* <weight>: Use a value from 400 to 840 */
+/* <uniquifier>: Use a unique and descriptive class name */
+/*.andada-pro-html {
+    font-family: "Andada Pro", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;   /* Regular */
+    /*
+    font-style: normal;
+}*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {  /* for attributes affecting the whole page */
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* Adjust this value based on the height of your nav bar */
+}
+
+body {
+    font-family: "Andada Pro", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;   /* Regular */
+    font-style: normal;
+}
+
+a { /* removes blue font & underline on links */
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav {
+    background-color: #D5B3B3;
+    display: flex;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;    /* centers in the middle of the nav bar */
+    padding: 0 50px;    /* 0 pad top&bottom, 50px left&right*/    
+}
+
+.left-nav {
+    font-size: 20px;
+}
+
+.right-nav {
+    font-size: 18px;
+    display: flex;  /* makes the gap actually work */
+    gap: 35px;  /* gap between each element */
+    padding-right: 10px;    /* pushes more inward from right side */
+}
+
+/* add some CSS in so when hover over links,
+either underlines with white bar or turns white text?? */
+
+
+#about-section {
+    flex-direction: column; /* stacks the elements top-to-bottom instead of in a row */
+    justify-content: center;    /* centers content in middle of this column-axis */
+    padding: 10px 100px;    /* CHANGE 10px???? */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 20px;  /* gap between each element */
+}
+
+/* put #about-section for more specification. if that's the only spot you have it, it's not necessary */
+#about-section .headshot {  /* makes the frame to hold the image */
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+    margin-top: 120px;  /* pushes it down from the top of the page */
+    margin-bottom: 42px;
+    border-radius: 50%; /* makes it a circle */
+}
+#about-section .headshot img {
+    width: 100%;    /* fills frame completely */
+    height: 100%;
+    object-fit: cover;  /* renders properly */
+}
+
+#about-section .biography {
+    padding: 0px 200px;
+    font-size: 16px;
+}
+
+/* Social Media */
+#about-section .social-media-links {
+    padding: 30px 200px;
+    display: flex;
+    justify-content: center;
+    margin-left: 23px;
+}
+
+#about-section .social-media-links a {    /* edits links */
+    padding: 0px 18px;
+    /*display: flex;
+    flex-direction: column;  /* Arranges the icon and text vertically */
+    /*align-items: center;     /* Centers the content inside the <a> (icon + text) */
+}
+
+#about-section a i {    /* edits icons */
+    color: #D5B3B3;
+    font-size: 50px;    /* size of icons */
+}
+
+#about-section .social-media-links p {
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+
+#heart-envelope {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 8%;
+    transition: transform 0.3s ease;
+}
+#heart-envelope:hover {
+    transform: translateY(-11px); /* moves it 11px up from its current position */
+}
