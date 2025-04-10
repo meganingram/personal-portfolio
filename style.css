@@ -45,7 +45,8 @@ nav {
     width: 100%;
     justify-content: space-between;
     align-items: center;    /* centers in the middle of the nav bar */
-    padding: 0 50px;    /* 0 pad top&bottom, 50px left&right*/    
+    padding: 0 50px;    /* 0 pad top&bottom, 50px left&right*/  
+    z-index: 1000;   /* makes sure it stays on top of everything else */  
 }
 
 .left-nav {
@@ -71,6 +72,7 @@ either underlines with white bar or turns white text?? */
     align-items: center;
     text-align: center;
     gap: 20px;  /* gap between each element */
+    margin-bottom: 40px;    /* space between the section and the divider */
 }
 
 /* put #about-section for more specification. if that's the only spot you have it, it's not necessary */
@@ -78,7 +80,7 @@ either underlines with white bar or turns white text?? */
     width: 320px;
     height: 320px;
     overflow: hidden;
-    margin-top: 120px;  /* pushes it down from the top of the page */
+    margin-top: 120px;  /* pulls it up from the top of the page */
     margin-bottom: 42px;
     border-radius: 50%; /* makes it a circle */
 }
@@ -118,13 +120,67 @@ either underlines with white bar or turns white text?? */
     font-size: 12px;
 }
 
+.divider {  /* will be populated with a ribbon soon */
+    width: 100%;
+    height: 10px;
+    background-color: #D5B3B3;
+    /*margin: 50px 0; /* top/bottom, left/right */
+    margin: 0;  /* so the circle doesn't overlay */
+    position: relative;
+    z-index: 50;    /* so on top of beige circle */
+}
+
+#skills-section-wrapper {
+    position: relative;
+    overflow: hidden; /* hides anything breaking out */
+}
+
+#skills-section {
+    margin-top: 100px;
+}
+
+#skills-section-wrapper .circle {  /* beige circle */
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 50%; /* makes it a circle */
+    background-color: #EBEDD2;
+    margin-left: -120px;
+    margin-top: -210px;  /* pulls it up from the bottom of the page */
+    position: absolute;
+    z-index: 10;  /* makes sure it stays on top of pink circle */
+}
+
+/* put #about-section for more specification. if that's the only spot you have it, it's not necessary */
+#skills-section .smiski {  /* pink circle holding the image */
+    width: 360px;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 50%; /* makes it a circle */
+    background-color: #C28D8D;
+    margin-left: -50px;
+    margin-top: -25px;
+    /* use these to push down from the about-section, but check after input divider!
+    might be able to do a generic #skills-section {} and put it in there instead
+    this may also adjust the location of the smiski, because I want him up/centered more*/
+    /*margin-top: 120px;  /* pushes it down from the top of the page */
+    /*margin-bottom: 42px; */
+}
+
+#skills-section .smiski img {
+    width: 400px;
+    height: auto;
+    margin-top: -20px;
+    margin-left: 10px;  /* moves it to the right some */
+}
 
 #heart-envelope {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    width: 8%;
+    width: 7%;
     transition: transform 0.3s ease;
+    z-index: 500;
 }
 #heart-envelope:hover {
     transform: translateY(-11px); /* moves it 11px up from its current position */
