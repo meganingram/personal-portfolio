@@ -100,7 +100,8 @@ either underlines with white bar or turns white text?? */
     transition: transform 0.3s ease;
 }
 #about-section .social-media-links i:hover {
-    transform: translateY(-9px); /* moves it 11px up from its current position */
+    /*transform: translateY(-9px); /* moves it 9px up from its current position */
+    transform: scale(1.2);
 }
 
 #about-section .social-media-links {
