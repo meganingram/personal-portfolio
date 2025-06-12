@@ -96,6 +96,13 @@ either underlines with white bar or turns white text?? */
 }
 
 /* Social Media */
+#about-section .social-media-links i {
+    transition: transform 0.3s ease;
+}
+#about-section .social-media-links i:hover {
+    transform: translateY(-9px); /* moves it 11px up from its current position */
+}
+
 #about-section .social-media-links {
     padding: 30px 200px;
     display: flex;
