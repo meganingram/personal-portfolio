@@ -189,18 +189,66 @@ either underlines with white bar or turns white text?? */
 .certifications h2 {
     padding-bottom: 30px;
 }
-.certifications p {     /* set width for text in Certifications section */
+.certifications p {     /* sets width for text in Certifications section */
     max-width: 25ch;
 }
 
-#heart-envelope {
+.email-button #heart-envelope {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 40px;
     width: 7%;
     transition: transform 0.3s ease;
     z-index: 500;
+    pointer-events: auto;
+    /* add a box shadow or outline here? */
 }
-#heart-envelope:hover {
+.email-button #heart-envelope:hover {
     transform: translateY(-11px); /* moves it 11px up from its current position */
 }
+
+.email-button .popup {
+    position: fixed;    /* was absolute */
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #5e5e5e;
+    padding: 7px 8px;
+    border-radius: 5px;     /* was 5px */
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    z-index: 400;
+
+    bottom: 50px;
+    right: 4px;
+
+    /* centers popup text */
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.email-button .popup::before {  /* little diamond making pointed middle piece*/
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: #5e5e5e;
+    bottom: -3px;
+    left: 51%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.email-button:hover .popup {
+    transform: translateY(-75px);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
