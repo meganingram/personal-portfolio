@@ -193,6 +193,36 @@ either underlines with white bar or turns white text?? */
     max-width: 25ch;
 }
 
+#projects-section h2 {  /* currently working on */
+    flex-direction: column; /* stacks the elements top-to-bottom instead of in a row */
+    justify-content: center;    /* centers content in middle of this column-axis */
+    /*padding: 10px 100px;    /* CHANGE 10px???? */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /*gap: 20px;  /* gap between each element */
+
+    margin-top: 40px;   /* space between the section and the divider */
+}
+
+#accomplishments {
+    flex-direction: column; /* stacks the elements top-to-bottom instead of in a row */
+    justify-content: center;    /* centers content in middle of this column-axis */
+    /*padding: 10px 100px;    /* CHANGE 10px???? */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /*gap: 20px;  /* gap between each element */
+
+    margin-top: 40px;   /* space between the section and the divider */
+    margin-bottom: 50px;    /* buffer between bottom of page and body */
+}
+
+#accomplishments h3 {
+    padding: 20px;
+}
+
+
 .email-button #heart-envelope {
     position: fixed;
     bottom: 30px;
@@ -213,17 +243,15 @@ either underlines with white bar or turns white text?? */
     color: #ffffff;
     background-color: #5e5e5e;
     padding: 7px 8px;
-    border-radius: 5px;     /* was 5px */
+    border-radius: 5px;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     z-index: 400;
-
     bottom: 50px;
     right: 4px;
 
